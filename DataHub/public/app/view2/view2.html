@@ -1,0 +1,36 @@
+<div ng-include="'user/index.html'"></div>
+<div style="margin-left: 2%">
+<form class="form-horizontal " ng-submit="login()">
+    <div class="form-group">
+        <label for="inputUsername" class="col-sm-2 control-label">用户名</label>
+
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="inputUsername" placeholder="用户名" ng-model="user.username"/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+        <div class="col-xs-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="密码" ng-model="user.password"/>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"/>记住我
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">登陆</button>
+            <!--<a href="#/view1">还没有账号，点击这里注册</a>-->
+        </div>
+
+</div>
+</form>
+ </div>

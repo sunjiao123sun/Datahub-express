@@ -1,0 +1,67 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">欢迎使用Data Hub系统</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/">登出</a></li>
+            </ul>
+            <div class=" navbar-form  btn-group navbar-right">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    角色切换 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <!--<li><ng-model="roles"></li>-->
+                    <li ng-repeat="role in roles"><a href="#/{{role.row}}">{{role.row}}</a></li>
+                    <!--<li ><a href="#/user">普通用户</a></li>-->
+                    <!--<li><a href="#/enterpriseManager">企业管理员</a></li>-->
+                    <!--<li><a href="#/plateform">平台管理员</a></li>-->
+                    <!--<li role="separator" class="divider"></li>-->
+                    <!--<li><a href="#">Separated link</a></li>-->
+
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+
+                <li><a ng-click="changeShow('personalInfoManage')">个人信息维护</a></li>
+                <li><a ng-click="changeShow('userApplyForEp')">选择加入企业</a></li>
+
+                <li><a ng-click="changeShow('list')">查询所负责的企业 <span class="sr-only">(current)</span></a></li>
+                <!--<li><a href="#">Export</a></li>-->
+            </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div ng-switch="ShowMode"  style="margin-top: 2%">
+                <div ng-switch-when="list">
+                    <div ng-include="'user/getAsssignEnterprise.html'"></div>
+                </div>
+                <div ng-switch-when="personalInfoManage">
+                    <div ng-include="'user/modifyUser.html'"></div>
+                </div>
+                <div ng-switch-when="userApplyForEp">
+                    <div ng-include="'user/userApplyForEp.html'"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

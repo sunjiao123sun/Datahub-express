@@ -1,0 +1,25 @@
+<div>
+    <form>
+        <div class="panel panel-default">
+            <div class="panel-heading"><p class="lead">本用户所负责企业</p></div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>负责企业的关系id</th>
+                        <th>企业id</th>
+                        <th>企业名称</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="row in rows0">
+                        <td width="33%"> {{row.gxid}}</td>
+                        <td width="33%">{{row.enterprise.id}}</td>
+                        <td>{{row.enterprise.mc}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+<div>
+    <form>
+        <div>
+            <input type="text" ng-model="test.name" placeholder="企业名称">&nbsp;&nbsp;
+            <input type="text" ng-model="test.product" placeholder="主营产品名称">&nbsp;&nbsp;
+            <input type="text" ng-model="test.address" placeholder="厂家地址">&nbsp;&nbsp;
+            <input type="text" ng-model="test.Status" placeholder="企业状态">&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn  btn-primary" ng-click="select()">查询</button>
+        </div>
+        <br>
+
+        <div ng-include="'platform/view/pager.html'"></div>
+        <br><br><br><br>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><p class="lead">申请加入企业</p></div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th width="10%" nowrap>企业id</th>
+                        <th width="25%" nowrap>厂家名称</th>
+                        <th width="10%" nowrap>厂家资源</th>
+                        <th width="10%" nowrap>厂家状态</th>
+                        <th width="10%" nowrap>厂家地址</th>
+                        <th width="20%" nowrap>主营业务</th>
+                        <th width="10%" nowrap>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody ng-repeat="row in rows">
+                    <tr>
+                        <td> {{row.id}}</a></td>
+                        <td>{{row.mc}}</td>
+                        <td>{{row.source}}</td>
+                        <td>{{row.status}}</td>
+                        <td>{{row.address}}</td>
+                        <td>{{row.business}}</td>
+                        <td>
+                            <button class="btn btn-primary" ng-show="row.status=='NORMAL'" ng-click="add(row.id)">
+                                申请加入
+                            </button>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>

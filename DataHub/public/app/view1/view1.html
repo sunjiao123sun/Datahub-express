@@ -1,0 +1,68 @@
+<div class="container">
+    <!--// ng-hide="authenticated"-->
+    <div class="jumbotron">
+        <h1 class="text-center">Data Hub</h1>
+        <p>
+        <h2 class="text-center">by Wei Xu & .. & ..</h2></p>
+
+        <p><a class="btn btn-primary btn-lg" role="button" href="#/view2">
+            登录</a>
+        </p>
+        <a href="#/view1">还没有账号，点击这里注册</a>
+    </div>
+    <!--<div ng-include="'main.html'" ng-show="authenticated"></div>-->
+</div>
+<div style="margin-left: 3%">
+<form class="form-horizontal" ng-submit="register()" >
+    <div class="form-group">
+        <label for="inputName" class="col-sm-2 control-label">用户名:</label>
+
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="inputName" placeholder="用户名" ng-model="user.username"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress" class="col-sm-2 control-label">地 &nbsp;&nbsp;  址:</label>
+
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="inputAddress" placeholder="地址" ng-model="user.address"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPhone" class="col-sm-2 control-label">电 &nbsp;&nbsp; 话:</label>
+
+        <div class="col-xs-3">
+            <input type="text" class="form-control" id="inputPhone" placeholder="电话" ng-model="user.phone"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail" class="col-sm-2 control-label">邮 &nbsp;&nbsp; 箱:</label>
+
+        <div class="col-xs-3">
+            <input type="email" class="form-control" id="inputEmail" placeholder="邮箱" ng-model="user.email"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 control-label">密 &nbsp;&nbsp; 码:</label>
+
+        <div class="col-xs-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="密码" ng-model="user.password"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputPassword2" class="col-sm-2 control-label">密码重复:</label>
+
+        <div class="col-xs-3">
+            <input type="password" class="form-control" id="inputPassword2" placeholder="请再次输入密码"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary btn-lg ">注  册</button>
+            <button type="reset" class="btn btn-primary btn-lg">取消</button>
+        </div>
+    </div>
+
+</form>
+</div>
